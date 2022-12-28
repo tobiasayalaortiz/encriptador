@@ -1,0 +1,178 @@
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+body {
+    background-color: #dcdcdc;
+}
+
+::placeholder {
+    color: #000000;
+    text-shadow: 0px 4px 4px #06eeff, 0px 4px 4px #06eeff;
+}
+
+.input-texto {
+    font-size: 1rem;
+    background: #dcdcdc;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    margin: 40px 5% 0 5%;
+}
+
+.texto {
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    font-family: Inter;
+    margin: 15px 10% 30px 10%;
+}
+
+.mensaje {
+    width: 80%;
+    border-radius: .5rem;
+    border: none;
+    background-image: url("../imagenes/Decifraelmensaje.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 140%;
+    box-shadow: -1px 5px 30px 5px #06eeff;
+    position: relative;
+    margin: 0 10% 0 10%;
+}
+
+.boton__copiar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.encriptar,
+.desencriptar,
+.copiar {
+    display: inline-block;
+    color: #fff;
+    background-color: #000000;
+    text-align: left;
+    padding: 10px 40px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: all .2s linear;
+    margin-bottom: 17px;
+    border: 2px solid #0f8dd1;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
+
+a.button:hover {
+    background-color: #0f8dd1;
+    color: #ffffff;
+}
+
+a.button-dot {
+    color: #fff !important;
+    font-size: 16px;
+    position: relative;
+}
+
+a.button-dot:hover {
+    color: rgb(0, 0, 0);    
+}
+
+a.button-dot span {
+    transition: .3s;
+    display: inline-block;
+    margin-left: 50px;
+    letter-spacing: 2px;
+}
+
+a.button-dot:hover span {
+    transform: translateX(-8px);
+}
+
+a.button-dot:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 90%;
+    top: -7px;
+    position: absolute;
+    transition: .3s;
+}
+
+a.button-dot:hover:before {
+    width: calc(100% + 30px);
+    height: 51px;
+    border-radius: 50px;
+    top: -18px;
+}
+
+
+.informacion {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*Aqui comienza el responsive*/
+
+@media screen and (min-width: 375px) {
+    .botones {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .mensaje {
+        background-size: 110%;
+        width: 60%;
+        margin: 0 20% 0 20%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+
+    .input-texto {
+        margin: 40px 5% 15% 5%;
+    }
+
+    .encriptar,
+    .desencriptar,
+    .copiar {
+        padding: .375rem;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .informacion {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .mensaje {
+        background-size: 130%;
+    }
+}
